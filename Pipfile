@@ -4,6 +4,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pylint = "*"
+autopep8 = "*"
+flake8 = "*"
 
 [packages]
 flask = "*"
@@ -11,7 +14,14 @@ flask-cors = "*"
 python-dotenv = "*"
 flask-sqlalchemy = "*"
 python-jose = "*"
+flask-migrate = "*"
+psycopg2-binary = "*"
+marshmallow = "*"
+gunicorn = "*"
 flask-script = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.8.5"
+
+[pipenv]
+allow_prereleases = true
