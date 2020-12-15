@@ -1,9 +1,12 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from database import setup_db
 
 
-def create_app(test_config=None):
+def create_app(test=False):
     app = Flask(__name__)
+
+    setup_db(app, test)
 
     CORS(app, resources={r"/*": {"origins": "*"}})
 
